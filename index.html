@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with text</title>
+</head>
+<body>
+    <div class="container">
+        <img src="img.jpg" alt="Image" class="image">
+        <div class="textbox">
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, recusandae provident consectetur mollitia tempore odio. Maiores magni ad maxime? In vero animi neque quaerat modi enim reprehenderit? Id, natus numquam!</p>
+        </div>
+    </div>
+</body>
+
+<style>
+    html{
+        height: 99%;
+    }
+    
+    body {
+        background: #1E1E1E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 650px;
+    }
+
+    .textbox {
+        background: rgba(0, 0, 0, 0.35);
+        transform: translateY(-85px);
+        opacity: 0;
+        padding-left: 15px;
+        transition: ease-in-out .5s;
+    }
+
+    .container:hover .textbox {
+        opacity: 1;
+    }
+</style>
+
+<!--<script>
+    $(document).ready(function(){
+        $(".img").mouseover(function(){
+            $(".textbox").classList.add("active");
+        });
+    });
+</script>-->
+
+</html>
